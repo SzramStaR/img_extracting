@@ -14,7 +14,7 @@ def findContours(img):
 
 images = {
     'planes/samolot02.jpg',
-    'planes/samolot06.jpg',
+    'planes/samolot17.jpg',
     'planes/samolot08.jpg',
     'planes/samolot09.jpg',
     'planes/samolot10.jpg',
@@ -37,5 +37,6 @@ for i,img in enumerate(images,start=1):
     for contour in contours:
         plt.plot(contour[:, 1], contour[:, 0], linewidth=2, c='white')
 
-plt.tight_layout(w_pad = 0.05,h_pad = 0.1)
+plt.subplots_adjust(wspace=0,hspace=0)
+plt.savefig('contours.pdf')
 plt.show()
